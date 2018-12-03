@@ -1,0 +1,120 @@
+/* pages/one/oneDetails/oneDetails.wxss */
+page{
+  background-color: #f6f6f6;
+}
+.oneDetails-img>image{
+  width: 100%;
+  vertical-align: top;
+}
+page, .container {
+  height:100%;
+}
+.header_text {
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:0;
+  height:250px;
+}
+.header_text > text {
+  font-size:18px;
+  color:#FFFFFF;
+  font-weight:200;
+}
+
+.navigator {
+  background-color: rgba(3, 169, 244, 0);
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+}
+.leftButton {
+  position:absolute;
+  width: 50px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leftButton > image {
+  width: 25px;
+  height: 25px;
+}
+.container {
+  margin-top: -64px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.title {
+  height: 44px;
+  /* margin-right: 50px; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title > text {
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 500;
+}
+.header_image {
+  width: 100%;
+  height: 250px;
+}
+
+
+.oneTexr-Main{
+  margin: 20rpx;
+  padding: 20rpx 40rpx;
+  position: relative;
+  top: -50px;
+  border-radius: 10rpx;
+  background-color:rgba(255, 255, 255, 0.63);
+  box-shadow: 0 0 1px 1px #e4e4e4;
+  overflow: hidden;
+}
+.oneTexr-imgAuthor{
+  padding: 20rpx 0; 
+  font-size:24rpx;
+  line-height:28rpx;
+  text-align:center;
+  color:#000;
+}
+.oneTexr-word{
+  margin: 10px 0;
+  font-size: 32rpx;
+  line-height: 52rpx;
+  color: #000;
+}
+.oneTexr-wordFrom{
+  text-align: right;
+  font-size: 24rpx;
+  line-height: 52rpx;
+  color: #808080;
+}
+.oneTexr-date{
+  padding: 20rpx;
+  text-align: center;
+}
+.oneTexr-day{
+  font-size: 96rpx;
+  color: #000;
+}
+.oneTexr-MonthYear{
+  display: inline-block;
+  padding: 0 20rpx;
+  padding-bottom: 5px;
+  font-size: 24rpx;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}

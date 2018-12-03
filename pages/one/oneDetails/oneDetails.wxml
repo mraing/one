@@ -1,0 +1,34 @@
+<!--pages/one/oneDetails/oneDetails.wxml-->
+
+<view bindsubmit='toTopHandler'>
+  <button form-type='submit'>
+    <view class='navigator' style='padding-top:{{STATUSBAR_HEIGHT}}px;background-color:rgba(3, 169, 244, {{opacity}});'>
+      <!-- 左边按钮 -->
+      <navigator open-type="navigateBack" delta="1" class='leftButton'><image src='../../../assets/back.svg'></image></navigator >
+      <!--中间标题  -->
+      <view class='title'>
+        <text>{{ ondetails.vol }}</text>
+      </view>
+      <!--右边间隙  -->
+    </view>
+  </button>
+</view>
+
+<view class='oneDetails'>
+  <view class='oneDetails-img'><image src='{{ ondetails.img_url }}' data-src='{{ ondetails.img_url }}' lazy-load="true" mode="widthFix" bindtap="tapName"></image></view>
+</view>
+
+<!-- 文字主体 -->
+<view class='oneTexr-Main'>
+  <!-- 摄影作者 -->
+  <view class='oneTexr-imgAuthor'>{{ ondetails.img_kind }}丨{{ ondetails.img_author }}</view>
+  <!-- 时间 -->
+  <view class='oneTexr-date'>
+    <view class='oneTexr-day'>{{ newDay }}</view>
+    <view class='oneTexr-MonthYear'>{{ newMonth }}/{{ newYear }}</view>
+  </view>
+  <!-- 句子 -->
+  <view class='oneTexr-word'>{{ ondetails.word }}</view>
+   <!-- 句子来源 -->
+  <view class='oneTexr-wordFrom'>——{{ ondetails.word_from }}</view>
+</view>

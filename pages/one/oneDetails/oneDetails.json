@@ -1,0 +1,9 @@
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "一个图文",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  }
+}

@@ -1,0 +1,69 @@
+<!--pages/one/one.wxml-->
+
+<!--导航栏  -->
+<view>
+  <button form-type='submit'>
+    <view class='navigator' style='padding-top:{{STATUSBAR_HEIGHT}}px;background-color:rgba(3, 169, 244, {{opacity}});'>
+      <!--中间标题  -->
+      <view class='title'>
+        <text>ONE</text>
+      </view>
+      <!--右边间隙  -->
+    </view>
+  </button>
+</view>
+
+<scroll-view 
+  scroll-y
+  bindscroll="scrollHandler"
+  scroll-with-animation
+  class="container"
+  scroll-top="{{SCROLL_TOP}}"
+>
+
+  <!-- <image src='../../assets/one2.jpg' class='header_image'></image>
+
+  <view class='header_text'>
+    <text>复杂的世界里，一个就够了</text>
+  </view> -->
+  <view class='oneMain'>
+    <view class='oneList' wx:for="{{datajson}}" wx:key="dataIndex" wx:for-index="dataIndex" wx:for-item="item">
+      <block wx:if='{{dataIndex < 1}}'>
+        <!-- 图片 -->
+        <navigator url="./oneDetails/oneDetails?key={{ dataIndex }}">
+          <image src='{{ item.img_url }}' lazy-load="true" mode="widthFix" class='header_image'></image>
+        </navigator >
+        <!-- 分类 -->
+        <view class="one-author">{{item.img_kind}}丨{{item.img_author}}</view>
+        <!-- 句子 -->
+        <view class="one-content">{{item.word}}</view>
+        <!-- 作者 -->
+        <view class="one-flex">
+          <view>{{item.date}}</view>
+          <view>{{item.word_from}}</view>
+          <view>{{item.vol}}</view>
+        </view>
+      </block>
+
+      <block wx:else>
+        <!-- 时间 -->
+        <view class="one-date">{{item.date}}</view> 
+        <!-- 期刊 -->
+        <view class="one-journals">{{item.vol}}</view>
+        <!-- 图片 -->
+        <navigator url="./oneDetails/oneDetails?key={{ dataIndex }}"  class="one-img">
+          <image src='{{ item.img_url }}' lazy-load="true" mode="widthFix"></image>
+        </navigator >
+        <!-- 分类 -->
+        <view class="one-journals">{{item.img_kind}}丨{{item.img_author}}</view>
+        <!-- 句子 -->
+        <view class="one-content">{{item.word}}</view>
+        <!-- 作者 -->
+        <view class="one-author">{{item.word_from}}</view>
+      </block>
+     
+    </view>
+      
+  </view>
+</scroll-view>
+
